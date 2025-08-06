@@ -1,4 +1,5 @@
 from welcom import Ui_welcome, QWidget
+from license import Ui_license
 from PySide6.QtWidgets import QMainWindow, QStackedWidget, QMessageBox, QPushButton
 
 def showMessageBox(parent, icon, title, text, buttons_text):
@@ -141,6 +142,18 @@ class WelcomPage(QWidget, Ui_welcome):
         super().__init__()
         self.setupUi(self)
 
+class LicensePage(QWidget, Ui_license):
+    def __init__(self):
+        super().__init__()
+        self.setupUi(self)
+        self.checkBox.stateChanged.connect(self.setButton)
+
+    def setButton(self):
+        if self.checkBox.isChecked():
+            self.next_button.setEnabled(True)
+        else:
+            self.next_button.setEnabled(False)
+
 class InstallerCore(QMainWindow):
     def __init__(self):
         super().__init__()
@@ -150,9 +163,17 @@ class InstallerCore(QMainWindow):
         self.setStyleSheet("background-color: rgb(255, 255, 255);")
 
         self.stack = QStackedWidget(self)
+
         self.welcome_page = WelcomPage()
-        self.welcome_page.cancel_button.clicked.connect(self.close)
+        self.license_page = LicensePage()
+
         self.stack.addWidget(self.welcome_page)
+        self.stack.addWidget(self.license_page)
+
+        self.welcome_page.cancel_button.clicked.connect(self.close)
+        self.welcome_page.next_button.clicked.connect(lambda: self.stack.setCurrentWidget(self.license_page))
+
+        self.license_page.cancel_button.clicked.connect(self.close)
 
         self.setCentralWidget(self.stack)
         self.stack.setCurrentWidget(self.welcome_page)
