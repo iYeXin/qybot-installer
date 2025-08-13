@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>welcome</class>
+ <widget class="QWidget" name="welcome">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>531</width>
+    <height>266</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>Segoe UI</family>
+    <pointsize>-1</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* 基础通用 */
+QWidget {
+    background-color: #ffffff;
+    color: #202020;
+    font-family: &quot;Segoe UI&quot;, &quot;Microsoft YaHei&quot;, sans-serif;
+    font-size: 14px;
+}
+
+/* QPushButton */
+QPushButton {
+    background-color: #41b883;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+}
+QPushButton:hover {
+    background-color: #3cae78;
+}
+QPushButton:pressed {
+    background-color: #359f6c;
+}
+QPushButton:disabled {
+    background-color: #cccccc;
+    color: #888888;
+}
+
+/* QLineEdit */
+QLineEdit {
+    background-color: white;
+    border: 1px solid #c6c6c6;
+    border-radius: 4px;
+    padding: 4px 8px;
+}
+QLineEdit:focus {
+    border: 1px solid #41b883;
+}
+
+/* QLabel */
+QLabel {
+    color: #202020;
+}
+
+/* QComboBox */
+QComboBox {
+    background-color: white;
+    border: 1px solid #c6c6c6;
+    border-radius: 4px;
+    padding: 4px 8px;
+}
+QComboBox:hover {
+    border: 1px solid #41b883;
+}
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 20px;
+    border-left: 1px solid #c6c6c6;
+}
+QComboBox QAbstractItemView {
+    background-color: white;
+    border: 1px solid #c6c6c6;
+    selection-background-color: #41b883;
+    selection-color: white;
+}
+
+/* QScrollBar（纵向） */
+QScrollBar:vertical {
+    background: transparent;
+    width: 10px;
+    margin: 0px;
+}
+QScrollBar::handle:vertical {
+    background: #c6c6c6;
+    border-radius: 5px;
+    min-height: 20px;
+}
+QScrollBar::handle:vertical:hover {
+    background: #a6a6a6;
+}
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical {
+    height: 0px;
+}
+QScrollBar::add-page:vertical,
+QScrollBar::sub-page:vertical {
+    background: none;
+}
+
+/* QFrame#Card （自定义卡片） */
+QFrame#Card {
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 8px;
+}
+
+/* QCheckBox */
+QCheckBox {
+    spacing: 6px;
+}
+QCheckBox::indicator {
+    width: 16px;
+    height: 16px;
+}
+QCheckBox::indicator:unchecked {
+    border: 1px solid #666;
+    background-color: white;
+    border-radius: 3px;
+}
+QCheckBox::indicator:checked {
+    background-color: #41b883;
+    border: 1px solid #41b883;
+    image: url(:/icons/check_white.png); /* 可选 */
+}
+</string>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>24</y>
+     <width>291</width>
+     <height>141</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:36pt; font-weight:700; color:#34495e;&quot;&gt;欢迎！&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; color:#34495e;&quot;&gt;此安装向导将引导你安装 QYBot。&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; color:#34495e;&quot;&gt;要继续，请点击下一步。&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="horizontalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>210</y>
+     <width>211</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QPushButton" name="cancel_button">
+      <property name="text">
+       <string>取消</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="next_button">
+      <property name="text">
+       <string>下一步</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>-10</x>
+     <y>20</y>
+     <width>221</width>
+     <height>221</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>Icon.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

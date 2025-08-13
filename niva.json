@@ -1,0 +1,18 @@
+{
+  "name": "QYbot-installer",
+  "uuid": "e07de5e5-723a-4c9d-835a-1813571da824",
+  "icon": "asset/logo.png",
+  "window": {
+    "entry": "index.html",
+    "devtools": true,
+    "title": "QYbot 安装向导",
+    "theme": "light",
+    "icon": "asset/logo.png",
+    "size": {
+      "width": 800,
+      "height": 600
+    },
+    "resizable": false,
+    "maximizable": false
+  }
+}

@@ -1,0 +1,732 @@
+/* 公共样式 */
+.installer {
+    font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+    height: 100%;
+    color: #34495E;
+}
+
+/* 按钮基础样式 */
+.installer-btn {
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    font-size: 16px;
+    min-width: 120px;
+}
+
+/* 主按钮 */
+.installer-btn-primary {
+    background: #41B883;
+    color: white;
+}
+
+.installer-btn-primary:hover {
+    background: #38A371;
+    box-shadow: 0 4px 8px rgba(65, 184, 131, 0.3);
+}
+
+/* 次要按钮 */
+.installer-btn-secondary {
+    background: #fcfeff;
+    color: #34495E;
+    border: 1px solid #34495E;
+}
+
+.installer-btn-secondary:hover {
+    background: #F1F3F5;
+}
+
+/* 欢迎页面特定样式 */
+.welcome-container {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+.welcome-hero {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+}
+
+.welcome-hero img {
+    max-width: 100%;
+    max-height: 320px;
+    object-fit: contain;
+}
+
+.welcome-content {
+    flex: 1.6;
+    padding: 40px;
+    /* border-left: 1px solid #EAECEF; */
+}
+
+.welcome-title {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: #34495E;
+}
+
+.welcome-description {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 32px;
+    color: #5C677D;
+}
+
+.welcome-features {
+    margin: 24px 0;
+    padding-left: 20px;
+}
+
+.welcome-features li {
+    margin-bottom: 12px;
+    position: relative;
+}
+
+.welcome-features li::before {
+    content: "•";
+    color: #41B883;
+    font-weight: bold;
+    position: absolute;
+    left: -20px;
+}
+
+.welcome-actions {
+    margin-right: 40px;
+    justify-content: flex-end;
+    display: flex;
+    gap: 16px;
+    margin-top: 40px;
+}
+
+/* 许可协议页面特定样式 */
+.license-container {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 5% 0 10%;
+}
+
+.license-header {
+    padding: 30px 40px 20px;
+    border-bottom: 1px solid #EAECEF;
+}
+
+.license-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #34495E;
+    margin: 0;
+}
+
+.license-content {
+    flex: 1;
+    overflow-y: auto;
+    /* 保留滚动功能 */
+    padding: 30px 40px;
+    padding-top: 0px;
+    line-height: 1.7;
+    color: #5C677D;
+    background-color: #f8fbfd6e;
+
+    /* 隐藏所有浏览器滚动条 */
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE/Edge */
+}
+
+/* Chrome/Safari/Edge 等 WebKit 内核浏览器 */
+.license-content::-webkit-scrollbar {
+    display: none;
+    /* 完全隐藏滚动条 */
+}
+
+.license-content h2 {
+    font-size: 20px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: #34495E;
+    border-bottom: 1px solid #EAECEF;
+    padding-bottom: 8px;
+}
+
+.license-content h3 {
+    font-size: 17px;
+    margin-top: 25px;
+    margin-bottom: 12px;
+    color: #34495E;
+}
+
+.license-content ul {
+    padding-left: 20px;
+    margin: 15px 0;
+}
+
+.license-content li {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.license-content li::before {
+    content: "•";
+    color: #41B883;
+    position: absolute;
+    left: -15px;
+}
+
+.license-content strong {
+    color: #34495E;
+}
+
+.license-warning {
+    background-color: #FFF8E6;
+    border-left: 4px solid #FFC107;
+    padding: 12px 20px;
+    margin: 20px 0;
+    border-radius: 0 4px 4px 0;
+}
+
+.license-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    border-top: 1px solid #EAECEF;
+    background: white;
+    position: sticky;
+    bottom: 0;
+}
+
+.license-agree {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+}
+
+.license-agree input {
+    width: 18px;
+    height: 18px;
+    accent-color: #41B883;
+}
+
+.license-next {
+    position: absolute;
+    right: 40px;
+}
+
+/* 依赖安装页面特定样式 */
+.dependencies-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 5% 0 10%;
+    box-sizing: border-box;
+}
+
+.dependencies-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    /* text-align: center; */
+    padding: 0 40px;
+}
+
+.dependencies-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+    background-color: #E8F5E9;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dependencies-icon svg {
+    width: 40px;
+    height: 40px;
+    fill: #41B883;
+}
+
+.dependencies-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #34495E;
+    margin-bottom: 10px;
+}
+
+.dependencies-description {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #5C677D;
+    max-width: 600px;
+    margin-bottom: 5px;
+}
+
+.dependencies-option {
+    background-color: #F8F9FA;
+    border-radius: 8px;
+    padding: 20px;
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border: 1px solid #EAECEF;
+}
+
+.dependencies-option input {
+    width: 20px;
+    height: 20px;
+    accent-color: #41B883;
+}
+
+.dependencies-option label {
+    font-size: 16px;
+    color: #34495E;
+    flex: 1;
+}
+
+.dependencies-footer {
+    padding: 20px 40px;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: auto;
+}
+
+/* 凭证填写页面特定样式 */
+.credentials-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 5% 0 10%;
+    box-sizing: border-box;
+}
+
+.credentials-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 0 40px;
+    max-width: 600px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.credentials-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #34495E;
+    margin-bottom: 10px;
+}
+
+.credentials-description {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #5C677D;
+    margin-bottom: 30px;
+}
+
+.credentials-description a {
+    color: #41B883;
+    text-decoration: none;
+}
+
+.credentials-description a:hover {
+    text-decoration: underline;
+}
+
+.credentials-form {
+    background-color: #F8F9FA;
+    border-radius: 8px;
+    padding: 25px;
+    border: 1px solid #EAECEF;
+}
+
+.credentials-field {
+    margin-bottom: 25px;
+}
+
+.credentials-field label {
+    display: block;
+    font-size: 16px;
+    color: #34495E;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.credentials-field input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #DCDFE6;
+    border-radius: 4px;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+.credentials-field input:focus {
+    outline: none;
+    border-color: #41B883;
+    box-shadow: 0 0 0 2px rgba(65, 184, 131, 0.2);
+}
+
+.credentials-note {
+    background-color: #FFF8E6;
+    border-left: 4px solid #FFC107;
+    padding: 12px 20px;
+    margin: 20px 0;
+    border-radius: 0 4px 4px 0;
+    font-size: 14px;
+    color: #5C677D;
+}
+
+.credentials-footer {
+    padding: 20px 40px;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: auto;
+}
+
+/* 安装目录选择页面特定样式 */
+.directory-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 5% 0 10%;
+    box-sizing: border-box;
+}
+
+.directory-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 0 40px;
+    max-width: 600px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.directory-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #34495E;
+    margin-bottom: 10px;
+}
+
+.directory-description {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #5C677D;
+    margin-bottom: 30px;
+}
+
+.directory-form {
+    background-color: #F8F9FA;
+    border-radius: 8px;
+    padding: 25px;
+    border: 1px solid #EAECEF;
+}
+
+.directory-field {
+    margin-bottom: 25px;
+}
+
+.directory-field label {
+    display: block;
+    font-size: 16px;
+    color: #34495E;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.directory-input-group {
+    display: flex;
+    gap: 10px;
+}
+
+.directory-input-group input {
+    flex: 1;
+    padding: 12px 15px;
+    border: 1px solid #DCDFE6;
+    border-radius: 4px;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+.directory-input-group input:focus {
+    outline: none;
+    border-color: #41B883;
+    box-shadow: 0 0 0 2px rgba(65, 184, 131, 0.2);
+}
+
+.directory-browse-btn {
+    padding: 12px 20px;
+    background: #E9ECEF;
+    border: 1px solid #DEE2E6;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.2s;
+}
+
+.directory-browse-btn:hover {
+    background: #DEE2E6;
+}
+
+.directory-space-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #6C757D;
+}
+
+.directory-footer {
+    padding: 20px 40px;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: auto;
+}
+
+/* 安装页面特定样式 - 优化版 */
+.installation-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 30px;
+    padding-top: 60px;
+}
+
+.installation-header {
+    margin-bottom: 15px;
+}
+
+.installation-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #34495E;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.installation-progress {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.progress-bar {
+    flex: 1;
+    height: 6px;
+    background-color: #EAECEF;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: #41B883;
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+.progress-text {
+    font-size: 16px;
+    font-weight: 500;
+    color: #5C677D;
+    min-width: 40px;
+}
+
+.installation-steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.step-item {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    background-color: #F8F9FA;
+    border-radius: 5px;
+    border: 1px solid #EAECEF;
+    height: 50px;
+    box-sizing: border-box;
+}
+
+.step-icon {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: #E9ECEF;
+    margin-right: 8px;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.step-icon::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #ADB5BD;
+}
+
+.step-item.running .step-icon::after {
+    background-color: #41B883;
+    box-shadow: 0 0 0 2px rgba(65, 184, 131, 0.2);
+    animation: pulse 1.5s infinite;
+}
+
+.step-item.success .step-icon::after {
+    background-color: #41B883;
+    content: "✓";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 9px;
+    color: white;
+}
+
+.step-item.error .step-icon::after {
+    background-color: #E74C3C;
+    content: "!";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 9px;
+    color: white;
+    font-weight: bold;
+}
+
+.step-item.skipped .step-icon::after {
+    background-color: #6C757D;
+    content: "-";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 9px;
+    color: white;
+    font-weight: bold;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(65, 184, 131, 0.4);
+    }
+
+    70% {
+        box-shadow: 0 0 0 5px rgba(65, 184, 131, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(65, 184, 131, 0);
+    }
+}
+
+.step-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.step-name {
+    font-size: 12px;
+    font-weight: 500;
+    color: #34495E;
+    margin-bottom: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.step-status {
+    font-size: 11px;
+    color: #6C757D;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.installation-console {
+    flex: 1;
+    background-color: #2C3E50;
+    border-radius: 5px;
+    padding: 10px;
+    color: #ECF0F1;
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    overflow-y: auto;
+    margin-bottom: 12px;
+    min-height: 100px;
+    max-height: 150px;
+}
+
+.installation-footer {
+    display: flex;
+    justify-content: center;
+}
+
+.installation-alert {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+.alert-content {
+    background-color: white;
+    border-radius: 6px;
+    padding: 15px;
+    width: 85%;
+    max-width: 350px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.alert-content h3 {
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #34495E;
+}
+
+.alert-content p {
+    font-size: 13px;
+    line-height: 1.4;
+    color: #5C677D;
+    margin-bottom: 15px;
+}
+
+.alert-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+.installer-btn {
+    padding: 8px 16px;
+    font-size: 13px;
+    min-width: 80px;
+}
